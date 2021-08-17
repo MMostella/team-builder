@@ -4,10 +4,31 @@ import Form from './components/Form';
 import styled from 'styled-components';
 import './App.css';
 
-// const styled = 
+const StyledApp = styled.div `
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  height: 950px;
+  background: url(https://picsum.photos/seed/picsum/1500/2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+    /* border: 1px solid yellow; */
+  }
+  button {
+    display: flex;
+    justify-content: center;
+  }
+` 
 
 const membersList = [
-  { Name: 'Mason', Email: 'masonmostella@gmail.com', Role: 'Student' }
+  { Name: 'Mason', Email: 'masonmostella@gmail.com', Role: 'Security Analyst' }
 ]
 
 export default function App() {
@@ -32,14 +53,14 @@ export default function App() {
   }
 
   return (
-    <>
+    <StyledApp>
       <Form 
       values={formValues}
       change={change}
       submit={submit}
       members={members}
       />
-    </>
+    </StyledApp>
   )
   
 }
